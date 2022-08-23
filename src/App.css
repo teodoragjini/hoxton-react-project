@@ -1,0 +1,84 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100px;
+  align-items: center;
+  background-color: rgb(129, 151, 216);
+  
+}
+.logo{
+  margin-left: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.header-list ul{
+  list-style: none;
+  text-decoration: none;
+}
+
+.header-list{
+  margin-left: 3rem;
+}
+
+.header-list  li{
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  color: white;
+  text-decoration: none;
+}
+
+.movie-container-list{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  gap:1rem;
+  list-style: none;
+}
+
+.single-movie{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  /* border: 1px solid black; */
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+  padding: 2rem;
+}
+
+.single-movie img{
+  width: 300px;
+  height: 400px;
+}
+
+.movie-container{
+  margin: 3rem auto;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.single-movie {
+  color: white;
+  margin: 0.5rem 0 0.5rem 0.5rem;
+  font-weight: bolder;
+
+}
+
+.App{
+  background-color:  rgb(129, 151, 216);
+}
+
+
+
+
