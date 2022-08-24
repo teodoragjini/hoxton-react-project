@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 type Movie ={
-    Id:number 
+    id:number 
     Title: string 
     Year:string 
     Released:string
@@ -29,7 +29,7 @@ export function Movies(){
             <ul className="movie-container-list">
                 {movies.map(movie => (
                     <li>
-                        <Link to = {`/movies/${movie.Id}`}>
+                        <Link to = {`/movies/${movie.id}`}>
                             <div className="single-movie">
                                 <img src={movie.Image}  />
                                 <h3>{movie.Title}</h3>

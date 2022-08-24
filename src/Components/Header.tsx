@@ -8,12 +8,30 @@ export function Header() {
       <nav className="header-list">
         <ul>
           <li>
-            <Link to="/movies">Movies</Link>
+            <Link to="/movies" style={{ color: "white" }}>
+              Movies
+            </Link>
           </li>
 
-          <li>
-            <Link to="/series">Series</Link>
-          </li>
+          <div className="dropdown">
+            <li>
+              <Link to="/series" style={{ color: "white" }}>
+                Genre
+              </Link>
+            </li>
+            <div className="dropdown-conten">
+                <p>Adventure, Fantasy</p>
+                <p>Action, Sci-Fi</p>
+                <p>Crime, Drama</p>
+                <p>Biography</p>
+            </div>
+          </div>
+
+          {/* <li >
+            <Link to="/series" style={{color:"white"}}>
+                Genre
+            </Link>
+          </li> */}
         </ul>
       </nav>
     </header>

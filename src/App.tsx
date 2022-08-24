@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Header } from "./Components/Header";
 import { Movies } from "./Pages/Movies";
+import { SingleMovie } from "./Pages/SingleMovie";
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
           <Route index element = {<Navigate to = '/movies' />}/>
           <Route path="/movies" element = {<Movies />}/>
+          <Route path="/movies/:id" element= {<SingleMovie />} />
 
         </Routes> 
       
