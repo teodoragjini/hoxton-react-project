@@ -19,7 +19,7 @@ export function Movies(){
     const[movies, setMovies] = useState<Movie[]>([])
 
     useEffect(()=>{
-        fetch('http://localhost:3006/movies')
+        fetch('http://localhost:3005/movies')
         .then(resp => resp.json())
         .then(moviesFromServer => setMovies(moviesFromServer))
     },[])

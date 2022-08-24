@@ -13,25 +13,21 @@ export function Header() {
             </Link>
           </li>
 
-          <div className="dropdown">
+          {/* <div className="dropdown"> */}
             <li>
-              <Link to="/series" style={{ color: "white" }}>
+              <Link to="/genre" style={{ color: "white" }}>
                 Genre
               </Link>
             </li>
-            <div className="dropdown-conten">
+            {/* <div className="dropdown-conten">
                 <p>Adventure, Fantasy</p>
                 <p>Action, Sci-Fi</p>
                 <p>Crime, Drama</p>
                 <p>Biography</p>
             </div>
-          </div>
+          </div> */}
 
-          {/* <li >
-            <Link to="/series" style={{color:"white"}}>
-                Genre
-            </Link>
-          </li> */}
+          
         </ul>
       </nav>
     </header>

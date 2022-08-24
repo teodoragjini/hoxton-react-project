@@ -21,7 +21,7 @@ export function SingleMovie() {
   
 
   useEffect(() => {
-    fetch(`http://localhost:3006/movies/${params.id}`)
+    fetch(`http://localhost:3005/movies/${params.id}`)
       .then((resp) => resp.json())
       .then((movieFromServer) => setMovie(movieFromServer))
   }, []);
