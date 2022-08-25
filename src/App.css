@@ -15,8 +15,10 @@ body {
 .header {
   display: grid;
   grid-template-columns: auto 1fr;
-  height: 100px;
-  align-items: center;
+  /* height: 10px; */
+  /* padding-bottom: 2rem; */
+  /* margin-top: 1rem; */
+  /* justify-content: center; */
   background-color: rgb(129, 151, 216);
 }
 .logo {
@@ -28,6 +30,7 @@ body {
 .header-list ul {
   list-style: none;
   text-decoration: none;
+  /* justify-self: center; */
 }
 
 .header-list {
@@ -91,11 +94,13 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   border: none;
   cursor: pointer;
+  /* justify-content: center; */
 }
 
 .dropdown {
   position: relative;
   display: inline-block;
+  justify-content: center;
 }
 
 .dropdown-content {

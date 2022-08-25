@@ -24,7 +24,7 @@ export function Header() {
       <nav className="header-list">
         <ul>
           <li>
-            <Link to="/movies" style={{ color: "white" }}>
+            <Link to="/movies" style={{ color: "white", alignItems:"center"}}>
               Movies
             </Link>
           </li>
