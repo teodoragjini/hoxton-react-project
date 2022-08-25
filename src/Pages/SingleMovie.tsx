@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Trailer } from "../Components/Trailer";
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
@@ -17,6 +18,8 @@ type Movie = {
   Plot: string;
   Language: string;
   Image: string;
+  Trailer: string;
+  totalSeasons: string
 };
 
 export function SingleMovie() {
@@ -34,25 +37,33 @@ export function SingleMovie() {
   return (
     <div className="single-movie-container">
       <div className="leftSingleMovie">
-        <img src={movie.Image} />
+        {/* <img src={movie.Image}  style={{width:300 , height:300}}/> */}
+        <Trailer id={movie.Trailer}/>
       </div>
 
       <div className="rightSingleMovie">
         <h2>{movie.Title}</h2>
         <h3>{movie.Plot}</h3>
 
+        {/* <p className="season"> Season:{movie.totalSeasons}</p> */}
+
+
+
         <span className="material-symbols-outlined">
           history
+          {/* <p>{movie.totalSeasons}</p> */}
           <p>{movie.Runtime}</p>
           <p>{movie.Genre}</p>
         </span>
 
+        {/* <Trailer id={movie.Trailer}/> */}
+        
         {/* <span className="material-symbols-outlined">
           play_arrow */}
-        <button className="single-button">
-          Trailer
-          <span className="material-symbols-outlined">play_arrow</span>
-        </button>
+        {/* <button className="single-button">
+          TRAILER
+          {/* <span className="material-symbols-outlined">play_arrow</span> */}
+        {/* </button> */} 
 
         {/* </span> */}
 

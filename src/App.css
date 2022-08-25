@@ -75,6 +75,8 @@ a {
 
 .App {
   background-color: rgb(129, 151, 216);
+  width: 100%;
+  height: 100%;
 }
 
 /* .dropdown {
@@ -145,8 +147,9 @@ a {
 
 .single-button{
   /* padding:1rem 0; */
-  /* width: 30%; */
-  border-radius: 5px;
+  width:10%;
+  height: 20px; ;
+  /* border-radius: 5px; */
   /* background-color: rgb(8, 7, 8); */
   color: rgb(0, 0, 0);
   font-weight: bolder;
@@ -157,6 +160,6 @@ a {
 }
 
 .single-button span{
-    align-items: center;
+    /* align-items: center; */
     /* padding-left: 10px; */
 }
