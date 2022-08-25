@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html {
+  min-height: 100%;
+  overflow-y: scroll;
+}
+body {
+  min-height: 100%;
+}
+
 .header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -35,26 +43,24 @@
   text-decoration: none;
 }
 
+.dropdown-content a {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  text-decoration: none;
+}
+
 .movie-container-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-content: center;
   gap: 1rem;
   list-style: none;
 }
 
-.single-movie {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  /* border: 1px solid black; */
-  align-items: center;
-  width: fit-content;
-  height: 100%;
-  padding: 2rem;
-}
-
 .single-movie img {
-  width: 300px;
+  width: 100%;
   height: 400px;
 }
 
@@ -73,13 +79,21 @@ a {
   font-weight: bolder;
 }
 
-.App {
-  background-color: rgb(129, 151, 216);
-  width: 100%;
-  height: 100%;
+body {
+  background-color: #000000;
 }
 
-/* .dropdown {
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 1.5rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
   position: relative;
   display: inline-block;
 }
@@ -90,28 +104,36 @@ a {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
   z-index: 1;
 }
 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
 .dropdown:hover .dropdown-content {
   display: block;
-} */
+}
 
 .single-movie-container {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 1rem;
 }
-.leftSingleMovie img {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  width: 300px;
-  border-radius: 5px;
+.leftSingleMovie  {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  /* width: 300px; */
+  /* border-radius: 5px; */
 }
 
 .rightSingleMovie {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-left: 2rem;
 }
 
@@ -158,6 +180,20 @@ a {
   margin-bottom: 3rem;
 
 }
+
+.single-movie img{
+  border-radius: 5px;
+}
+
+.single-movie img:hover{
+  transform: scale(1.10)
+
+}
+
+.single-movie h3{
+  margin-top: 1rem;
+}
+
 
 .single-button span{
     /* align-items: center; */

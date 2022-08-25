@@ -34,8 +34,6 @@ export function Movies(){
                                 <img src={movie.Image}  />
                                 <h3>{movie.Title}</h3>
                                 <h4>{movie.Genre}</h4>
-
-
                             </div>
                         </Link>
                     </li>

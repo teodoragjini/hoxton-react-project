@@ -24,7 +24,7 @@ export function SingleGenre() {
     fetch(`http://localhost:3005/movies?categoryId=${params.id}`)
       .then((resp) => resp.json())
       .then((moviesFromServer) => setMovies(moviesFromServer))
-  }, []);
+  });
 
   return (
     <div className="movie-container">

@@ -19,7 +19,7 @@ type Movie = {
   Language: string;
   Image: string;
   Trailer: string;
-  totalSeasons: string
+  totalSeasons: string;
 };
 
 export function SingleMovie() {
@@ -38,42 +38,20 @@ export function SingleMovie() {
     <div className="single-movie-container">
       <div className="leftSingleMovie">
         {/* <img src={movie.Image}  style={{width:300 , height:300}}/> */}
-        <Trailer id={movie.Trailer}/>
+        <Trailer id={movie.Trailer} />
       </div>
 
       <div className="rightSingleMovie">
         <h2>{movie.Title}</h2>
         <h3>{movie.Plot}</h3>
 
-        {/* <p className="season"> Season:{movie.totalSeasons}</p> */}
-
-
-
         <span className="material-symbols-outlined">
           history
-          {/* <p>{movie.totalSeasons}</p> */}
           <p>{movie.Runtime}</p>
           <p>{movie.Genre}</p>
         </span>
 
         {/* <Trailer id={movie.Trailer}/> */}
-        
-        {/* <span className="material-symbols-outlined">
-          play_arrow */}
-        {/* <button className="single-button">
-          TRAILER
-          {/* <span className="material-symbols-outlined">play_arrow</span> */}
-        {/* </button> */} 
-
-        {/* </span> */}
-
-        {/* <button>Trailer</button> */}
-
-        {/* <span> */}
-        {/* <p>{movie.Runtime}</p> */}
-        {/* </span> */}
-        {/* <p>{movie.Runtime}</p> */}
-        {/* <p>{movie.Genre}</p> */}
       </div>
     </div>
   );
