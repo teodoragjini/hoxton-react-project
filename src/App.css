@@ -16,9 +16,7 @@ body {
   display: grid;
   grid-template-columns: auto 1fr;
   /* height: 10px; */
-  /* padding-bottom: 2rem; */
-  /* margin-top: 1rem; */
-  /* justify-content: center; */
+  align-items: center;
   background-color: rgb(129, 151, 216);
 }
 .logo {
@@ -30,7 +28,6 @@ body {
 .header-list ul {
   list-style: none;
   text-decoration: none;
-  /* justify-self: center; */
 }
 
 .header-list {
