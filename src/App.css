@@ -65,7 +65,7 @@ body {
 }
 
 .movie-container {
-  margin: 3rem auto;
+  margin: 0.5rem auto;
 }
 
 a {
@@ -202,7 +202,8 @@ body {
   margin: auto;
   padding: 1rem;
   border-radius: 20px;
-  background-color: rgb(204, 201, 201);
-  margin-top:0.2rem;
-  margin-left: 80rem;
+  background-color: white;
+  margin-top:0.5rem;
+  color: #000000;
+  margin-left: 80.5rem;
 }
