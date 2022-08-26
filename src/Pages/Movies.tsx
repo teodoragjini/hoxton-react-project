@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react"
+import { JSXElementConstructor, ReactElement, ReactFragment, ReactPortal, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { SearchBar } from "../Components/SearchBar"
 
 type Movie ={
     id:number 
@@ -17,6 +18,7 @@ type Movie ={
 
 export function Movies(){
     const[movies, setMovies] = useState<Movie[]>([])
+    const[search, setSearch] = useState('')
 
     useEffect(()=>{
         fetch('http://localhost:3005/movies')
@@ -24,10 +26,14 @@ export function Movies(){
         .then(moviesFromServer => setMovies(moviesFromServer))
     },[])
 
+    const filteredMovies = movies.filter((movie) => movie.Title.toLowerCase().includes(search.toLowerCase()))
+
     return(
+        <>     
+        <SearchBar setSearch={setSearch} />
         <div className="movie-container">
             <ul className="movie-container-list">
-                {movies.map(movie => (
+                {filteredMovies.map((movie: { id: any; Image: string | undefined; Title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined; Genre: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | ReactFragment | ReactPortal | null | undefined }) => (
                     <li>
                         <Link to = {`/movies/${movie.id}`}>
                             <div className="single-movie">
@@ -40,5 +46,6 @@ export function Movies(){
                 ))}
             </ul>
         </div>
+        </>
     )
 }
